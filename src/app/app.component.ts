@@ -1,6 +1,11 @@
 import { UsersService } from './users.service';
 import { Component } from '@angular/core';
 
+interface User {
+  user: string;
+  pass: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,11 +14,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Servicios con Angular';
   nombre = 'Robert Rocky Balboa';
+  usersService: UsersService;
+  dataUsers: User[];
 
   constructor(){
-    
-    const usersService = new UsersService();
 
-    console.log('%c' + usersService.getUsers(), 'background-color: red; color: yellow;');
+    this.usersService = new UsersService();
+    this.dataUsers = this.usersService.getUsers();
+
+    console.log('%c' + this.dataUsers, 'background-color: red; color: yellow;');
   }
 }

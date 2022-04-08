@@ -1,5 +1,9 @@
 export class UsersService {
-    getUsers():string{
-        return 'Datos de mis usuarios desde mi primer servicio';
+    getUsers(){
+        return [
+            {user:'User0201', pass: '123456'},
+            {user:'User0552', pass: '121212'},
+            {user:'User0779', pass: '556677'}
+        ];
     }
 }

@@ -1,0 +1,23 @@
+#wrapperOut{
+    display: flex;
+    width: 100%;
+    padding-top: 5%;
+    justify-content: center;
+}
+
+#wrapperIn {
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    background-color: lightskyblue;
+    min-width: 535px;
+}
+
+img{
+    width: 150px;
+    border-radius: 50%;
+}
+
+ul{
+    list-style: none;
+}
