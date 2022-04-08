@@ -1,3 +1,4 @@
+import { UsersService } from './users.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular017-servicios';
+  title = 'Servicios con Angular';
+  nombre = 'Robert Rocky Balboa';
+
+  constructor(){
+    
+    const usersService = new UsersService();
+
+    console.log('%c' + usersService.getUsers(), 'background-color: red; color: yellow;');
+  }
 }
