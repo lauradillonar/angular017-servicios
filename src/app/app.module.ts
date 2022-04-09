@@ -13,7 +13,7 @@ import { CService } from './c.service';
   imports: [
     BrowserModule
   ],
-  providers: [BService, CService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
