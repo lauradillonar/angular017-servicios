@@ -3,16 +3,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { BService } from './b.service';
+import { CService } from './c.service';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    CommonModule
+    BrowserModule
   ],
-  providers: [],
+  providers: [BService, CService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
