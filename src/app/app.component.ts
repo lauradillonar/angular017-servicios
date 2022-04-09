@@ -1,10 +1,7 @@
+import { CService } from './c.service';
+import { BService } from './b.service';
 import { UsersService } from './users.service';
 import { Component } from '@angular/core';
-
-interface User {
-  user: string;
-  pass: string;
-}
 
 @Component({
   selector: 'app-root',
@@ -13,15 +10,9 @@ interface User {
 })
 export class AppComponent {
   title = 'Servicios con Angular';
-  nombre = 'Robert Rocky Balboa';
-  usersService: UsersService;
-  dataUsers: User[];
 
   constructor(){
-
-    this.usersService = new UsersService('admin','121212');
-    this.dataUsers = this.usersService.getUsers();
-
-    console.log('%c' + this.dataUsers, 'background-color: red; color: yellow;');
+    const serviceB = new BService();
+    const serviceC = new CService();
   }
 }
