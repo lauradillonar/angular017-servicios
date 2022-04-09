@@ -19,7 +19,7 @@ export class AppComponent {
 
   constructor(){
 
-    this.usersService = new UsersService();
+    this.usersService = new UsersService('admin','121212');
     this.dataUsers = this.usersService.getUsers();
 
     console.log('%c' + this.dataUsers, 'background-color: red; color: yellow;');

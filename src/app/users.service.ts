@@ -1,4 +1,9 @@
 export class UsersService {
+
+    constructor(dbuser: string, dbpass: string){
+        console.log(dbuser + dbpass);
+    }
+
     getUsers(){
         return [
             {user:'User0201', pass: '123456'},
