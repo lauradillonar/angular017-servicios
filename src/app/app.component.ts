@@ -11,8 +11,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Servicios con Angular';
 
-  constructor(){
-    const serviceB = new BService();
-    const serviceC = new CService();
+  constructor(private serviceB: BService, private serviceC: CService){
   }
 }
